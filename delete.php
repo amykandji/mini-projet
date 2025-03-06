@@ -16,4 +16,13 @@ if(!empty($_GET["idArticle"])){
     header("Location:articles.php");
 }
 
+
+
+if(!empty($_GET["idcommande"])){
+    $query="delete from commande where idcommande=:id";
+    $objstmt=$pdo->prepare($query);
+    $objstmt->execute(["id"=>$_GET["idcommande"]]);
+    $objstmt->closeCursor();
+    header("Location:commandes.php");
+}
 ?>

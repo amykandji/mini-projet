@@ -8,7 +8,7 @@
         $pdostmt=$pdo->prepare($query);
         $pdostmt->execute(["nom"=>$_POST["inputnom"],"ville"=>$_POST["inputville"],"tel"=>$_POST["inputtel"]]);
         $pdostmt->closeCursor();
-        header("Location:clients.php");
+        //header("Location:clients.php");
     }
 ?>
 
